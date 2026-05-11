@@ -3,6 +3,7 @@ package br.com.douglas.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -10,7 +11,7 @@ import jakarta.persistence.Table;
 @Table(name="TB_CURSO")
 public class Curso {
 
-    
+    @Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="cliente_seq")
 	@SequenceGenerator(name="cliente_seq", sequenceName="sq_cliente", initialValue = 1, allocationSize = 1)
     private Long id;
