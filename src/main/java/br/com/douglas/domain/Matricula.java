@@ -25,13 +25,13 @@ public class Matricula {
     @Column(name="CODIGO", length=10, nullable=false, unique=true)
     private String codigo;
 
-    @Column(name="DATA_MATRICULA")
+    @Column(name="DATA_MATRICULA", nullable=false)
     private Instant dataMatricula;
 
-    @Column(name="valor")
+    @Column(name="valor", nullable=false)
     private Double valor;
 
-    @Column(name="status")    
+    @Column(name="status", nullable=false)    
     private String Status;
 
     public Long getId() {
